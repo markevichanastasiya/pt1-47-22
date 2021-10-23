@@ -5,7 +5,6 @@ workflows:
     jobs:
       - test-flake8
       - check-tasks
-      - pylint/lint
 jobs:
   build:
     docker:
