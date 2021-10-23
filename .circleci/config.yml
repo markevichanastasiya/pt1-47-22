@@ -9,26 +9,26 @@ workflows:
 jobs:
   build:
     docker:
-      - image: circleci/python:3.10
+      - image: circleci/python:3.9
     steps:
       - checkout
   python/flake8:
     docker:
-      - image: circleci/python:3.10
+      - image: circleci/python:3.9
     steps:
       - checkout
       - run: sudo pip install tox
       - run: tox -eflake8
   python/pylint:
     docker:
-      - image: circleci/python:3.10
+      - image: circleci/python:3.9
     steps:
       - checkout
       - run: sudo pip install tox
       - run: tox -epylint
   tests:
     docker:
-      - image: circleci/python:3.10
+      - image: circleci/python:3.9
     steps:
       - checkout
       - run:
