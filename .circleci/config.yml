@@ -26,7 +26,7 @@ jobs:
       - checkout
       - run: sudo pip install tox
       - run: tox -epylint
-  check-tasks:
+  tests:
     docker:
       - image: circleci/python:3.10
     steps:
